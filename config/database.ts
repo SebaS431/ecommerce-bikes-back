@@ -44,12 +44,11 @@ export default ({ env }) => {
     },
     sqlite: {
       connection: {
-        filename: path.join(__dirname, '..', '..', env('DATABASE_FILENAME', '.tmp/data.db')),
+        filename: path.join(__dirname, '..', '..', 'data', env('DATABASE_FILENAME', 'strapi.db')),
       },
       useNullAsDefault: true,
     },
   };
-
   return {
     connection: {
       client,
